@@ -1,4 +1,4 @@
-package com.learnings.actor.interaction.requestresponse;
+package com.learnings.actor.interaction.tell;
 
 import akka.actor.typed.Behavior;
 import akka.actor.typed.javadsl.AbstractBehavior;

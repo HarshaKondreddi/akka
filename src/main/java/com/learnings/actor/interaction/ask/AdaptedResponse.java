@@ -1,4 +1,4 @@
-package com.learnings.actor.interaction.requestresponse;
+package com.learnings.actor.interaction.ask;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,6 +9,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Response {
-    private String result;
+public class AdaptedResponse {
+
+    private String message;
 }

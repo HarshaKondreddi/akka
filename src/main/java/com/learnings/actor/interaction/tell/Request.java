@@ -1,4 +1,4 @@
-package com.learnings.actor.interaction.requestresponse;
+package com.learnings.actor.interaction.tell;
 
 import akka.actor.typed.ActorRef;
 import lombok.AllArgsConstructor;
