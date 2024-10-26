@@ -34,10 +34,6 @@ public class Caller extends AbstractBehavior<AdaptedResponse> {
         return Behaviors.setup(context -> new Caller(context, customer));
     }
 
-    public static Behavior<AdaptedResponse> create() {
-        return Behaviors.setup(context -> new Caller(context, null));
-    }
-
     @Override
     public Receive<AdaptedResponse> createReceive() {
         return newReceiveBuilder()

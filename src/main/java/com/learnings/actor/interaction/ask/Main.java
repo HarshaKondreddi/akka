@@ -2,7 +2,6 @@ package com.learnings.actor.interaction.ask;
 
 import akka.actor.typed.ActorRef;
 import akka.actor.typed.ActorSystem;
-import akka.actor.typed.Props;
 import akka.actor.typed.javadsl.Behaviors;
 
 public class Main {
