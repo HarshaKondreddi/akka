@@ -12,6 +12,6 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Request {
 
-    private String query;
+    private Integer cookies;
     private ActorRef<Response> replyTo;
 }

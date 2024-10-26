@@ -14,7 +14,7 @@ public class CookieRequester {
                 Requester.create(), "requester", Props.empty()
         );
 
-        cookieFabricService.tell(new Request("can you make 10 cookies?", requester));
+        cookieFabricService.tell(new Request(11, requester));
 
         System.out.println(cookieFabricService.path());
         System.out.println(requester.path());

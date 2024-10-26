@@ -8,6 +8,8 @@ import akka.actor.typed.javadsl.Receive;
 
 public class CookieFabricService extends AbstractBehavior<Request> {
 
+    private int baked = 0;
+
     public CookieFabricService(ActorContext<Request> context) {
         super(context);
     }
@@ -24,7 +26,12 @@ public class CookieFabricService extends AbstractBehavior<Request> {
     }
 
     private Behavior<Request> onRequest(Request request) {
-        request.getReplyTo().tell(new Response("Here are the cookies for " + request.getQuery()));
+        if(request.getCookies()+baked > 10) {
+            request.getReplyTo().tell(new Response("Raw material unavailable to make cookies"));
+        } else {
+            baked += request.getCookies();
+            request.getReplyTo().tell(new Response("Take " + request.getCookies() + " cookies. Enjoy!"));
+        }
         return Behaviors.same();
     }
 
